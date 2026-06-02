@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="topnav">
+        <div class="nav-title">Smart Calculator</div>
+        <div class="nav-links">
+            <button class="nav-btn active">Basic</button>
+            <button class="nav-btn" id="toggle-history-btn">History</button>
+        </div>
+    </nav>
+
+    <!-- History Side Panel -->
+    <aside class="history-panel hidden" id="history-panel">
+        <div class="history-header">
+            <h2>History</h2>
+            <button id="clear-history-btn" class="clear-history-btn">
+                <span class="material-symbols-outlined">delete</span> Clear
+            </button>
+        </div>
+        <div class="history-list" id="history-list">
+            <!-- History items injected by JS -->
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="calculator-container">
+
+            <!-- Ambient glow decorations -->
+            <div class="glow glow-top-left"></div>
+            <div class="glow glow-bottom-right"></div>
+
+            <!-- Display Area -->
+            <div class="display-area">
+                <button class="copy-btn" id="copy-btn" title="Copy result">
+                    <span class="material-symbols-outlined">content_copy</span>
+                </button>
+                <div class="expression-display" id="expression-display"></div>
+                <div class="result-display" id="result-display">0</div>
+            </div>
+
+            <!-- Memory Row -->
+            <div class="memory-row">
+                <button class="mem-btn">MC</button>
+                <button class="mem-btn">MR</button>
+                <button class="mem-btn">M+</button>
+                <button class="mem-btn">M-</button>
+            </div>
+
+            <!-- Keypad -->
+            <div class="keypad" id="keypad">
+                <!-- Row 1 -->
+                <button class="btn btn-clear col-span-2" data-action="clear">AC</button>
+                <button class="btn btn-operator" data-operator="%">%</button>
+                <button class="btn btn-operator" data-operator="/">÷</button>
+                <!-- Row 2 -->
+                <button class="btn btn-number" data-number="7">7</button>
+                <button class="btn btn-number" data-number="8">8</button>
+                <button class="btn btn-number" data-number="9">9</button>
+                <button class="btn btn-operator" data-operator="*">×</button>
+                <!-- Row 3 -->
+                <button class="btn btn-number" data-number="4">4</button>
+                <button class="btn btn-number" data-number="5">5</button>
+                <button class="btn btn-number" data-number="6">6</button>
+                <button class="btn btn-operator" data-operator="-">−</button>
+                <!-- Row 4 -->
+                <button class="btn btn-number" data-number="1">1</button>
+                <button class="btn btn-number" data-number="2">2</button>
+                <button class="btn btn-number" data-number="3">3</button>
+                <button class="btn btn-operator" data-operator="+">+</button>
+                <!-- Row 5 -->
+                <button class="btn btn-number col-span-2" data-number="0">0</button>
+                <button class="btn btn-number" data-number=".">.</button>
+                <button class="btn btn-action" data-action="calculate">=</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-copy">© 2024 Precision Instruments. Created for power users.</div>
+        <div class="footer-links">
+            <a href="#">Portfolio</a>
+            <a href="#">Source Code</a>
+            <a href="#">Documentation</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
