@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Yashwanth R | B.Tech IT & Aspiring Full Stack Developer Portfolio</title>
+  <meta name="description" content="Professional portfolio of Yashwanth R, a B.Tech Information Technology student at R.M.D. Engineering College, beginner programmer, and anime artist.">
+  <meta name="keywords" content="Yashwanth R, Yashwanth, R.M.D. Engineering College, B.Tech IT, Green Creds, Beginner Coder, Developer Portfolio, HTML, CSS, JavaScript, React, Anime Art">
+  <meta name="author" content="Yashwanth R">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yashwanth R | Developer Portfolio">
+  <meta property="og:description" content="B.Tech IT student at R.M.D. Engineering College. Aspiring full-stack developer, team leader of Green Creds, and artist.">
+  <meta property="og:image" content="assets/project-greencreds.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Yashwanth R | Developer Portfolio">
+  <meta property="twitter:description" content="B.Tech IT student at R.M.D. Engineering College. Aspiring full-stack developer, team leader of Green Creds, and artist.">
+  <meta property="twitter:image" content="assets/project-greencreds.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/profile-yashwanth.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome CDN for brand and tech icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- 1. Loading Screen -->
+  <div id="loader">
+    <div class="loader-logo">Yashwanth<span style="color: var(--primary-color);">.IT</span></div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- 2. Sticky Header & Navigation -->
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo">Yashwanth<span style="color: var(--primary-color);">.IT</span></a>
+      
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="actions-container">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+          <i class="sun-icon" data-lucide="sun"></i>
+          <i class="moon-icon" data-lucide="moon"></i>
+        </button>
+        
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+
+    <!-- 3. Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-glow-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-text reveal">
+          <span class="hero-welcome">Hello & Welcome</span>
+          <h1 class="hero-title">Hi, I'm <span>Yashwanth R</span></h1>
+          <h2 class="hero-subtitle">I am an <span id="typewriter-text"></span></h2>
+          <p class="hero-description">
+            A B.Tech Information Technology student at R.M.D. Engineering College. I'm a beginner programmer eager to learn new technologies, create innovative web applications, and combine my passion for coding with sketching and anime art.
+          </p>
+          
+          <div class="hero-btns">
+            <a href="#projects" class="btn btn-primary">
+              View Projects <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              Contact Me <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+            </a>
+          </div>
+
+          <div class="hero-tech-pills">
+            <span class="tech-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span class="tech-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span class="tech-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="tech-pill"><i class="fa-brands fa-react"></i> React</span>
+            <span class="tech-pill"><i class="fa-brands fa-python"></i> Python</span>
+            <span class="tech-pill"><i class="fa-solid fa-paintbrush"></i> UI/UX Sketching</span>
+          </div>
+        </div>
+
+        <div class="hero-image-container reveal">
+          <div class="profile-img-wrapper">
+            <div class="profile-img-inner">
+              <img src="assets/profile-yashwanth.png" alt="Yashwanth R Profile Picture">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. About Me Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Biography</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-info-text reveal">
+            <h3>B.Tech IT Student at R.M.D. Engineering College</h3>
+            <p>
+              I am currently pursuing my Bachelor of Technology in Information Technology at R.M.D. Engineering College (batch of 2025-2029). As a beginner new to the coding landscape, I have an insatiable curiosity and I am always looking for new concepts, architectures, and design processes to learn and master.
+            </p>
+            <p>
+              Recently, I acted as the Team Leader for the "Green Creds" project. Managing a team, coordinating task distribution, and creating an eco-reward concept helped us win 2nd place and a 2,000 INR prize in our competition, which strongly motivated my development journey.
+            </p>
+            <p>
+              Outside the digital console, I have a deep passion for traditional sketching, drawing, and anime illustration. This artistic interest helps me design creative, vibrant user interfaces with unique color balance and modern aesthetics.
+            </p>
+          </div>
+
+          <div class="about-cards-grid reveal">
+            <div class="glass-card about-card">
+              <div class="about-card-icon">
+                <i data-lucide="graduation-cap"></i>
+              </div>
+              <h4>Education & College</h4>
+              <p>R.M.D. Engineering College<br>B.Tech IT (2025-2029)<br>GPA: 9.27 (so far)</p>
+            </div>
+
+            <div class="glass-card about-card">
+              <div class="about-card-icon">
+                <i data-lucide="award"></i>
+              </div>
+              <h4>Board Results</h4>
+              <p>10th Grade: 86%<br>12th Grade: 82%</p>
+            </div>
+
+            <div class="glass-card about-card">
+              <div class="about-card-icon">
+                <i data-lucide="palette"></i>
+              </div>
+              <h4>Artistic Hobbies</h4>
+              <p>Anime Illustration, Character Sketching, Digital Coloring</p>
+            </div>
+
+            <div class="glass-card about-card">
+              <div class="about-card-icon">
+                <i data-lucide="compass"></i>
+              </div>
+              <h4>Coding Outlook</h4>
+              <p>Eager beginner looking for new libraries and algorithms to learn</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Counter Statistics -->
+        <div class="about-counters reveal">
+          <div class="counter-item">
+            <span class="counter-num" data-target="4">0+</span>
+            <span class="counter-label">Projects Completed</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-num" data-target="9">0+</span>
+            <span class="counter-label">GPA (Semesters So Far)</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-num" data-target="2000">0+</span>
+            <span class="counter-label">Prize Money Won (INR)</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-num" data-target="2">0+</span>
+            <span class="counter-label">Board Marks (Averages)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Expertise</span>
+          <h2 class="section-title">My Skills</h2>
+        </div>
+
+        <div class="skills-container">
+          <!-- Web Dev Cards -->
+          <div class="glass-card skills-category reveal">
+            <h3 class="skills-category-title">
+              <i data-lucide="layout"></i> Frontend & Basic Coding
+            </h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-brands fa-html5"></i> HTML5 / CSS3</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-progress" data-percentage="80%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-brands fa-js"></i> JavaScript Basics</span>
+                  <span class="skill-percentage">70%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-progress" data-percentage="70%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-brands fa-react"></i> React Framework</span>
+                  <span class="skill-percentage">60%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-progress" data-percentage="60%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-solid fa-paintbrush"></i> Drawing & Sketch UI Design</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-progress" data-percentage="90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages & Databases Cards -->
+          <div class="glass-card skills-category reveal">
+            <h3 class="skills-category-title">
+              <i data-lucide="code-2"></i> Languages & Databases
+            </h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-brands fa-python"></i> Python (Data & Logic)</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-progress" data-percentage="75%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-brands fa-java"></i> Java / C Core</span>
+                  <span class="skill-percentage">70%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-progress" data-percentage="70%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-solid fa-server"></i> SQL (MySQL)</span>
+                  <span class="skill-percentage">65%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-progress" data-percentage="65%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fa-solid fa-leaf"></i> MongoDB / NoSQL</span>
+                  <span class="skill-percentage">60%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-progress" data-percentage="60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">My Work</span>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Green Creds -->
+          <div class="glass-card project-card reveal">
+            <div class="project-img-container">
+              <img src="assets/project-greencreds.png" alt="Green Creds Project Showcase">
+            </div>
+            <div class="project-details">
+              <span class="project-tag">Eco-Innovation & Web Dev</span>
+              <h3 class="project-title">Green Creds (Award Winner)</h3>
+              <p class="project-desc">
+                An eco-friendly credit application. Led a team of student developers to design a reward matrix encouraging sustainable lifestyle habits. Won a 2,000 INR prize in our competition.
+              </p>
+              <div class="project-tech">
+                <span class="project-tech-badge">Team Leadership</span>
+                <span class="project-tech-badge">HTML5 / CSS3</span>
+                <span class="project-tech-badge">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/yashwanthdqc2007-cell" target="_blank" rel="noopener" class="project-btn project-btn-secondary">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#" class="project-btn project-btn-primary" onclick="event.preventDefault(); alert('Won 2K prize as Team Leader!');">
+                  <i data-lucide="award" style="width: 16px; height: 16px;"></i> Won 2K Prize
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Music Player -->
+          <div class="glass-card project-card reveal">
+            <div class="project-img-container">
+              <img src="assets/project-music.png" alt="Music Player Showcase">
+            </div>
+            <div class="project-details">
+              <span class="project-tag">Front-End Application</span>
+              <h3 class="project-title">Anime Theme Music Player</h3>
+              <p class="project-desc">
+                An aesthetic audio player dashboard with custom anime album art styles, audio controls, progress bar seeking, and playlist managers.
+              </p>
+              <div class="project-tech">
+                <span class="project-tech-badge">Vanilla JS</span>
+                <span class="project-tech-badge">Audio API</span>
+                <span class="project-tech-badge">Theme Styling</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/yashwanthdqc2007-cell" target="_blank" rel="noopener" class="project-btn project-btn-secondary">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#" class="project-btn project-btn-primary">
+                  <i data-lucide="external-link" style="width: 16px; height: 16px;"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Image Gallery -->
+          <div class="glass-card project-card reveal">
+            <div class="project-img-container">
+              <img src="assets/project-gallery.png" alt="Image Gallery Showcase">
+            </div>
+            <div class="project-details">
+              <span class="project-tag">Art Grid Design</span>
+              <h3 class="project-title">Art & Anime Sketch Gallery</h3>
+              <p class="project-desc">
+                A dynamic grid photography and sketching gallery. Showcase sketches with filters, tag groups, visual zoom effects, and full lightbox popups.
+              </p>
+              <div class="project-tech">
+                <span class="project-tech-badge">HTML5</span>
+                <span class="project-tech-badge">CSS Grid</span>
+                <span class="project-tech-badge">Lightbox JS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/yashwanthdqc2007-cell" target="_blank" rel="noopener" class="project-btn project-btn-secondary">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#" class="project-btn project-btn-primary">
+                  <i data-lucide="external-link" style="width: 16px; height: 16px;"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Portfolio -->
+          <div class="glass-card project-card reveal">
+            <div class="project-img-container">
+              <img src="assets/project-portfolio.png" alt="Portfolio Website Showcase">
+            </div>
+            <div class="project-details">
+              <span class="project-tag">Web Design</span>
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-desc">
+                The current premium, responsive developer portfolio featuring dark/light modes, scroll reveal statistics, typing animations, and custom contact overlays.
+              </p>
+              <div class="project-tech">
+                <span class="project-tech-badge">HTML5</span>
+                <span class="project-tech-badge">CSS Variables</span>
+                <span class="project-tech-badge">Vanilla JS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/yashwanthdqc2007-cell" target="_blank" rel="noopener" class="project-btn project-btn-secondary">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#" class="project-btn project-btn-primary">
+                  <i data-lucide="external-link" style="width: 16px; height: 16px;"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Resume Section -->
+    <section id="resume" class="section">
+      <div class="container resume-container">
+        <div class="glass-card resume-card reveal">
+          <div class="resume-glow"></div>
+          <div class="resume-icon">
+            <i data-lucide="file-text" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3>Take a Look at My Resume</h3>
+          <p>
+            Interested in a detailed breakdown of my college semesters, schooling board marks (86% 10th, 82% 12th), Green Creds team project records, and sketch portfolio logs? Click below to download.
+          </p>
+          <a href="#" class="btn btn-primary" onclick="event.preventDefault(); alert('Resume PDF is currently simulated. Re-deploy with your path!');">
+            <i data-lucide="download" style="width: 18px; height: 18px;"></i> Download Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Achievements & Certifications -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Accomplishments</span>
+          <h2 class="section-title">Certifications & Achievements</h2>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Achievement 1 -->
+          <div class="glass-card achievement-card reveal">
+            <div class="achievement-icon">
+              <i data-lucide="trophy"></i>
+            </div>
+            <h4>Hackathon Team Leader</h4>
+            <p>
+              Led our team for the "Green Creds" project. Pitched our reward dashboard and secured 2nd place with a cash prize of 2,000 INR.
+            </p>
+            <span class="achievement-meta">Competition Winner | 2025</span>
+          </div>
+
+          <!-- Achievement 2 -->
+          <div class="glass-card achievement-card reveal">
+            <div class="achievement-icon">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+            <h4>Academic Honors (IT)</h4>
+            <p>
+              Secured a high academic standard at R.M.D. Engineering College, maintaining a 9.27 CGPA in our semester examinations so far.
+            </p>
+            <span class="achievement-meta">R.M.D. College | 2025</span>
+          </div>
+
+          <!-- Achievement 3 -->
+          <div class="glass-card achievement-card reveal">
+            <div class="achievement-icon">
+              <i data-lucide="award"></i>
+            </div>
+            <h4>Schooling Excellence</h4>
+            <p>
+              Maintained consistent performance throughout my education, securing 86% in 10th boards and 82% in 12th board exams.
+            </p>
+            <span class="achievement-meta">Board of Education | 2025</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info Details -->
+          <div class="contact-info reveal">
+            <h3>Let's build something new</h3>
+            <p style="color: var(--text-muted);">
+              Always open to discuss collaborative coding challenges, web application designs, anime sketches, or internship opportunities. Feel free to connect!
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">
+                  <i data-lucide="mail"></i>
+                </div>
+                <div class="contact-detail-text">
+                  <h5>Email Me</h5>
+                  <p>iimyashwanth2007@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">
+                  <i data-lucide="phone"></i>
+                </div>
+                <div class="contact-detail-text">
+                  <h5>Call Me</h5>
+                  <p>+91 98765 01234</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div class="contact-detail-text">
+                  <h5>Location</h5>
+                  <p>Chennai, Tamil Nadu, India</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://www.linkedin.com/in/yashwanth-r-a1039537a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/yashwanthdqc2007-cell" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form Details -->
+          <div class="glass-card contact-form-container reveal">
+            <form id="contactForm" class="contact-form" autocomplete="off">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <input type="text" id="name" class="form-input" placeholder=" " required>
+                  <label for="name" class="form-label">Full Name</label>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" class="form-input" placeholder=" " required>
+                  <label for="email" class="form-label">Email Address</label>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <input type="text" id="subject" class="form-input" placeholder=" " required>
+                <label for="subject" class="form-label">Subject</label>
+              </div>
+
+              <div class="form-group">
+                <textarea id="message" class="form-input" placeholder=" " required></textarea>
+                <label for="message" class="form-label">Your Message</label>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                Send Message <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 10. Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <h4>Yashwanth<span style="color: var(--primary-color);">.IT</span></h4>
+          <p>
+            An aspiring B.Tech Information Technology student focused on web development, sketch designs, and learning new technologies every day.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-socials-col">
+          <h4>Stay Connected</h4>
+          <p style="margin-bottom: 1rem;">Let's connect on digital platforms.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/yashwanthdqc2007-cell" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yashwanth-r-a1039537a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram Profile">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Yashwanth R. All Rights Reserved.</p>
+        <p>B.Tech IT Student (2025-2029) | R.M.D. Engineering College</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 11. Toast Notifications Popup -->
+  <div id="toast-msg" class="toast-msg">
+    <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i>
+    <span id="toast-text">Success message goes here.</span>
+  </div>
+
+  <!-- 12. Back To Top Floating Action Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Scroll Back to Top">
+    <i data-lucide="arrow-up" style="width: 20px; height: 20px;"></i>
+  </button>
+
+  <!-- Lucide Icons Vector Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Interactive Handlers JS Link -->
+  <script src="script.js"></script>
+</body>
+</html>
