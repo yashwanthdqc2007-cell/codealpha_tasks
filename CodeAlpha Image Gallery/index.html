@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIFT // Premium Automotive Gallery</title>
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Explore SHIFT, a premium responsive automotive gallery featuring high-quality images and specs of sports, luxury, electric, and muscle cars.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Speedometer Page Loader -->
+    <div id="page-loader" class="loader-container">
+        <div class="speedometer">
+            <div class="dial"></div>
+            <div class="needle"></div>
+            <div class="speed-text">0</div>
+            <div class="speed-unit">KM/H</div>
+        </div>
+        <p class="loader-text">IGNITING ENGINE...</p>
+    </div>
+
+    <!-- Responsive Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <i class="fa-solid fa-gauge-high logo-icon animate-glow"></i>
+                <span>SHIFT</span><span class="logo-accent">//</span>
+            </a>
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- Main Gallery Section -->
+    <main class="gallery-section" id="gallery-section">
+        <div class="section-container">
+            <div class="gallery-header">
+                <div class="gallery-title-wrapper">
+                    <h2 class="section-title">THE SHOWROOM</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="gallery-controls">
+                    <!-- Filter Pill-Buttons -->
+                    <div class="filter-wrapper" id="filter-wrapper">
+                        <button class="filter-btn active" data-filter="all" id="btn-filter-all">
+                            <span class="btn-text">All Cars</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                        <button class="filter-btn" data-filter="sports" id="btn-filter-sports">
+                            <span class="btn-text">Sports</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                        <button class="filter-btn" data-filter="suv" id="btn-filter-suv">
+                            <span class="btn-text">SUVs</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                        <button class="filter-btn" data-filter="sedan" id="btn-filter-sedan">
+                            <span class="btn-text">Sedans</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                        <button class="filter-btn" data-filter="electric" id="btn-filter-electric">
+                            <span class="btn-text">Electric</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                        <button class="filter-btn" data-filter="luxury" id="btn-filter-luxury">
+                            <span class="btn-text">Luxury</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                        <button class="filter-btn" data-filter="muscle" id="btn-filter-muscle">
+                            <span class="btn-text">Muscle</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- CSS Grid Car Gallery -->
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Dynamically generated car cards go here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Immersive Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Car image viewer">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        
+        <div class="lightbox-content" id="lightbox-content">
+            <div class="lightbox-image-wrapper">
+                <img src="" alt="" id="lightbox-img" class="lightbox-img">
+            </div>
+            
+            <!-- Interactive Detail overlay inside Lightbox -->
+            <div class="lightbox-details" id="lightbox-details">
+                <div class="lightbox-text">
+                    <span class="lightbox-category" id="lightbox-cat">CATEGORY</span>
+                    <h2 class="lightbox-title" id="lightbox-title">Brand Model</h2>
+                    <p class="lightbox-specs" id="lightbox-specs">Engine // Horsepower // Top Speed</p>
+                </div>
+                <div class="lightbox-counter" id="lightbox-counter">0 / 0</div>
+            </div>
+        </div>
+        
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding: 30px 0;">
+        <div class="footer-bottom" style="margin-top: 0; padding-top: 0; border-top: none; justify-content: center;">
+            <div class="social-icons">
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript script -->
+    <script src="script.js"></script>
+</body>
+</html>
