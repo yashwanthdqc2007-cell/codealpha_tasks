@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Isai - A premium, modern, and interactive Tamil Music Player featuring popular hits from Sai Abhyankkar, Anirudh, Ilaiyaraaja, A.R. Rahman, and Yuvan. Built with glassmorphism and smooth animations.">
+    <title>Isai - Premium Tamil Music Player</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons for controls -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Startup Loading Animation Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <i class="fa-solid fa-compact-disc spin-slow"></i>
+                <span>Isai</span>
+            </div>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+            <p class="loader-text">Loading Your Playlist...</p>
+        </div>
+    </div>
+
+    <!-- Main Application Container -->
+    <div class="app-container">
+        
+        <!-- Sidebar Navigation (Desktop only, responsive collapse on mobile) -->
+        <aside class="sidebar" aria-label="Main Navigation">
+            <div class="sidebar-logo">
+                <i class="fa-solid fa-compact-disc"></i>
+                <h1>Isai</h1>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="active"><a href="#" id="nav-home"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+                    <li><a href="#" id="nav-library"><i class="fa-solid fa-music"></i> <span>My Library</span></a></li>
+                    <li><a href="#" id="nav-favorites"><i class="fa-solid fa-heart"></i> <span>Favorites</span></a></li>
+                </ul>
+            </nav>
+            
+            <hr class="sidebar-divider">
+            
+            <div class="sidebar-shortcuts">
+                <h3>Keyboard Shortcuts</h3>
+                <ul>
+                    <li><kbd>Space</kbd> <span>Play / Pause</span></li>
+                    <li><kbd><i class="fa-solid fa-arrow-left"></i></kbd> <span>Previous Song</span></li>
+                    <li><kbd><i class="fa-solid fa-arrow-right"></i></kbd> <span>Next Song</span></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-footer">
+                <p>Created by Antigravity</p>
+            </div>
+        </aside>
+        
+        <!-- Main Panel Content -->
+        <main class="main-content">
+            
+            <!-- App Header -->
+            <header class="main-header">
+                <!-- Search bar -->
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search songs, artists, albums..." aria-label="Search songs">
+                    <button id="clear-search-btn" class="clear-search-btn" aria-label="Clear search" style="display: none;">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                
+                <!-- Profile / Theme indicator -->
+                <div class="header-right">
+                    <div class="shortcut-tip-btn" id="shortcut-tip-btn" title="View Keyboard Shortcuts">
+                        <i class="fa-solid fa-keyboard"></i>
+                    </div>
+                    <div class="profile-avatar">
+                        <img src="images/aasa-kooda.jpg" alt="User Avatar" id="profile-pic">
+                        <span>Tamil Music Fan</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Decorative Ambient Hero Banner -->
+            <section class="hero-banner" aria-label="Featured Artist">
+                <div class="hero-bg-blur" id="hero-bg-blur"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Now Streaming</span>
+                    <h2 id="hero-title">Aasa Kooda</h2>
+                    <p id="hero-subtitle">Sai Abhyankkar • Think Indie</p>
+                    <button class="btn btn-primary" id="hero-play-btn"><i class="fa-solid fa-play"></i> Play Now</button>
+                </div>
+            </section>
+            
+            <!-- Music Player Core Grid -->
+            <div class="player-grid">
+                
+                <!-- Left: Now Playing Detailed Widget -->
+                <section class="now-playing-panel card glass" aria-label="Now Playing Audio Details">
+                    <div class="panel-glow" id="panel-glow"></div>
+                    
+                    <!-- Cover Art Container -->
+                    <div class="cover-container">
+                        <div class="cover-wrapper" id="cover-wrapper">
+                            <img src="images/aasa-kooda.jpg" alt="Song Cover Art" id="player-cover">
+                        </div>
+                        <!-- Decorative vinyl center to resemble rotation -->
+                        <div class="vinyl-center" id="vinyl-center"></div>
+                    </div>
+                    
+                    <!-- Song Meta -->
+                    <div class="song-meta-container">
+                        <div class="song-details">
+                            <h3 id="player-title" class="marquee-text">Aasa Kooda</h3>
+                            <p id="player-artist">Sai Abhyankkar</p>
+                            <p id="player-album" class="album-name">Think Indie</p>
+                        </div>
+                        <button class="favorite-btn" id="favorite-btn" aria-label="Add to Favorites">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <!-- Audio Visualizer Bouncing Bars -->
+                    <div class="visualizer-container" id="visualizer-container">
+                        <div class="visualizer-bar" style="--bar-index: 1;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 2;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 3;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 4;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 5;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 6;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 7;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 8;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 9;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 10;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 11;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 12;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 13;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 14;"></div>
+                        <div class="visualizer-bar" style="--bar-index: 15;"></div>
+                    </div>
+
+                    <!-- Timeline Progress Slider -->
+                    <div class="progress-container">
+                        <div class="time-label" id="current-time">0:00</div>
+                        <div class="progress-bar-wrapper">
+                            <input type="range" id="progress-slider" min="0" max="100" value="0" class="slider" aria-label="Song progress slider">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <div class="time-label" id="total-duration">0:00</div>
+                    </div>
+                    
+                    <!-- Player Audio Controls Panel -->
+                    <div class="player-controls">
+                        <!-- Shuffle Button -->
+                        <button class="control-btn" id="shuffle-btn" title="Shuffle Playlist" aria-label="Shuffle playlist">
+                            <i class="fa-solid fa-shuffle"></i>
+                        </button>
+                        
+                        <!-- Previous Button -->
+                        <button class="control-btn prev-btn" id="prev-btn" title="Previous Song" aria-label="Previous song">
+                            <i class="fa-solid fa-backward-step"></i>
+                        </button>
+                        
+                        <!-- Play/Pause Big Center Button -->
+                        <button class="control-btn play-pause-btn" id="play-btn" title="Play" aria-label="Play song">
+                            <i class="fa-solid fa-play play-icon"></i>
+                        </button>
+                        
+                        <!-- Next Button -->
+                        <button class="control-btn next-btn" id="next-btn" title="Next Song" aria-label="Next song">
+                            <i class="fa-solid fa-forward-step"></i>
+                        </button>
+                        
+                        <!-- Repeat Button -->
+                        <button class="control-btn" id="repeat-btn" title="Repeat (Off)" aria-label="Repeat mode">
+                            <i class="fa-solid fa-repeat"></i>
+                            <span class="repeat-badge" id="repeat-badge">1</span>
+                        </button>
+                    </div>
+
+                    <!-- Volume Control Strip -->
+                    <div class="volume-panel">
+                        <button class="volume-mute-btn" id="volume-btn" aria-label="Mute/Unmute volume">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </button>
+                        <div class="volume-slider-wrapper">
+                            <input type="range" id="volume-slider" min="0" max="100" value="80" class="slider" aria-label="Volume slider">
+                            <div class="volume-fill" id="volume-fill"></div>
+                        </div>
+                        <span class="volume-percentage" id="volume-percentage">80%</span>
+                    </div>
+
+                    <!-- Ambient playing status banner -->
+                    <div class="status-indicator">
+                        <span class="pulse-indicator"></span>
+                        <span id="playing-status-text">Ready to Play</span>
+                    </div>
+                </section>
+                
+                <!-- Right: Playlist View -->
+                <section class="playlist-panel card glass" aria-label="Song Playlist">
+                    <div class="playlist-header">
+                        <h2>Tamil Hits Playlist</h2>
+                        <span id="playlist-count" class="badge">5 Songs</span>
+                    </div>
+                    
+                    <!-- Search Results No Found message -->
+                    <div class="no-songs-found" id="no-songs-found" style="display: none;">
+                        <i class="fa-solid fa-music-slash"></i>
+                        <p>No songs match your search query.</p>
+                    </div>
+
+                    <!-- Playlist Tracks list -->
+                    <div class="playlist-tracks" id="playlist-tracks" role="list">
+                        <!-- Dynamic track cards are injected here by JS, structure below is for fallback/accessibility -->
+                        <div class="fallback-playlist-content" style="display: none;">
+                            <div class="track-card active" role="listitem">
+                                <span class="track-index">1</span>
+                                <img src="images/aasa-kooda.jpg" alt="Aasa Kooda Cover" class="track-thumb">
+                                <div class="track-info">
+                                    <h4>Aasa Kooda</h4>
+                                    <p>Sai Abhyankkar</p>
+                                </div>
+                                <span class="track-duration">0:30</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </main>
+        
+    </div>
+
+    <!-- HTML Audio Element -->
+    <audio id="audio-player" preload="auto"></audio>
+
+    <!-- JS Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
